@@ -74,9 +74,9 @@ export const TaskFilters = ({ filters, onFiltersChange }: TaskFiltersProps) => {
             className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent text-gray-900 transition-all duration-200"
           >
             <option value="">Todas las prioridades</option>
-            <option value="low">Baja</option>
-            <option value="medium">Media</option>
-            <option value="high">Alta</option>
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">Alta</option>
           </select>
         </div>
       </div>
