@@ -1,191 +1,263 @@
+
+# 🚀 Task App
+
+Aplicación web moderna y completa para la **gestión inteligente de tareas**, impulsada por IA, con frontend en **Next.js** y backend en **Express.js** + **MongoDB**.
+
+---
+
+## ✨ Características Principales
+
+- ✅ Gestión completa de tareas (CRUD)
+- 🤖 Integración con **Google Gemini** para IA
+- 📊 Dashboard con estadísticas en tiempo real
+- 🏷️ Sistema de etiquetas y filtros avanzados
+- ⚡ Interfaz moderna con **Next.js 15** y **Tailwind CSS**
+- 🔒 API REST segura con validaciones y sanitización
+- 📱 Diseño completamente responsive
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+### 🔷 Frontend
+
+| Tecnología     | Descripción                    |
+|---------------|--------------------------------|
+| Next.js 15.3.5| Framework React moderno        |
+| React 19      | Biblioteca UI principal        |
+| TypeScript    | Tipado estático                |
+| Tailwind CSS  | Framework CSS utilitario       |
+
+### 🔶 Backend
+
+| Tecnología       | Descripción                         |
+|------------------|-------------------------------------|
+| Node.js          | Entorno de ejecución JavaScript     |
+| Express.js 4.18.2| Framework backend ligero            |
+| MongoDB          | Base de datos NoSQL                 |
+| Mongoose 8.0.3   | ODM para MongoDB                    |
+| Google Gemini    | IA para resumen y generación de tareas |
+
+### 🧰 Herramientas Adicionales
+
+- Helmet (seguridad HTTP)
+- CORS (control de origen)
+- Morgan (logs de requests)
+- Express Validator (validaciones)
+
+---
+
+## 📁 Estructura del Proyecto
+
 ```
-# Task App
-
-Aplicación web completa para gestión de tareas con funcionalidades de IA, desarrollada con Next.js en el frontend y Express.js con MongoDB en el backend.
-
-🚀 Características
-✅ Gestión completa de tareas (CRUD)  
-🤖 Integración con IA (Google Gemini) para resúmenes y creación automática  
-📊 Dashboard con estadísticas en tiempo real  
-🏷️ Sistema de etiquetas y filtros  
-⚡ Interfaz moderna con Next.js 15 y Tailwind CSS  
-🔒 API REST segura con validaciones  
-📱 Diseño responsive  
-
-🛠️ Tecnologías
-
-Frontend  
-- Next.js 15.3.5 - Framework React  
-- React 19 - Biblioteca de UI  
-- TypeScript - Tipado estático  
-- Tailwind CSS 4 - Framework CSS  
-
-Backend  
-- Node.js - Runtime de JavaScript  
-- Express.js 4.18.2 - Framework web  
-- MongoDB - Base de datos NoSQL  
-- Mongoose 8.0.3 - ODM para MongoDB  
-- Google Generative AI - Integración con Gemini  
-
-Herramientas adicionales  
-- Helmet - Seguridad HTTP  
-- CORS - Manejo de políticas de origen cruzado  
-- Morgan - Logging de requests  
-- Express Validator - Validación de datos  
-
-📁 Estructura del Proyecto
-
 task-app/
 ├── backend/
 │   ├── src/
 │   │   ├── config/
-│   │   │   └── database.js
 │   │   ├── controllers/
-│   │   │   ├── aiController.js
-│   │   │   └── taskController.js
 │   │   ├── middleware/
-│   │   │   └── errorHandler.js
 │   │   ├── models/
-│   │   │   └── Task.js
 │   │   ├── routes/
-│   │   │   ├── aiRoutes.js
-│   │   │   └── taskRoutes.js
 │   │   ├── services/
-│   │   │   └── geminiService.js
 │   │   ├── validators/
-│   │   │   ├── aiValidator.js
-│   │   │   └── taskValidator.js
 │   │   └── index.js
 │   ├── .env
 │   └── package.json
 └── frontend/
     ├── app/
-    │   ├── page.tsx
-    │   ├── layout.tsx
-    │   └── globals.css
     ├── components/
     ├── hooks/
     ├── services/
     ├── types/
     ├── .env.local
     └── package.json
+```
 
-⚙️ Configuración
+---
 
-Variables de Entorno
+## ⚙️ Configuración del Entorno
 
-Backend (.env)
-GOOGLE_API_KEY=AIzaSyCUFsjAJ2B72Kj2-ZaWBcCDvYk5xeTUCYk  
-PORT=8000  
-MONGODB_URI=mongodb+srv://diego:toyboyaco07@diegocastcluster.9lpsglb.mongodb.net/TaskAppT?retryWrites=true&w=majority&appName=diegocastCluster  
+### 🔐 Variables de Entorno
 
-Frontend (.env.local)
-NEXT_PUBLIC_API_URL=http://localhost:8000/api  
+**Backend (.env):**
+```env
+GOOGLE_API_KEY=tu_api_key_google
+PORT=8000
+MONGODB_URI=tu_uri_de_mongo
+```
 
-🚀 Instalación y Ejecución
+**Frontend (.env.local):**
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000/api
+```
 
-Prerrequisitos  
-- Node.js (versión 18 o superior)  
-- npm o yarn  
-- MongoDB (local o en la nube)  
-- Cuenta de Google Cloud con API de Gemini habilitada  
+---
 
-1. Clonar el repositorio
-git clone https://github.com/tu-usuario/task-app.git  
-cd task-app  
+## 🧪 Instalación y Ejecución
 
-2. Configurar el Backend
-cd backend  
-npm install  
+### ✅ Prerrequisitos
 
-Crear archivo .env con las variables de entorno mencionadas arriba.  
+- Node.js (v18+)
+- npm o yarn
+- MongoDB local o en la nube
+- Cuenta de Google Cloud con API de Gemini habilitada
 
-# Ejecutar en modo desarrollo
-npm run dev  
+### 🔧 Pasos
 
-# Ejecutar en modo producción
-npm start  
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/tu-usuario/task-app.git
+cd task-app
+```
 
-El backend estará disponible en http://localhost:8000  
+2. **Backend**
+```bash
+cd backend
+npm install
+npm run dev       # Desarrollo
+npm start         # Producción
+```
+Disponible en: `http://localhost:8000`
 
-3. Configurar el Frontend
-cd frontend  
-npm install  
+3. **Frontend**
+```bash
+cd frontend
+npm install
+npm run dev       # Desarrollo
+npm run build     # Compilar
+npm start         # Producción
+```
+Disponible en: `http://localhost:3000`
 
-Crear archivo .env.local con las variables de entorno mencionadas arriba.  
+---
 
-# Ejecutar en modo desarrollo
-npm run dev  
+## 📚 API Endpoints
 
-# Construir para producción
-npm run build  
-npm start  
+### 📝 Tareas
 
-El frontend estará disponible en http://localhost:3000  
+| Método | Endpoint             | Descripción                    |
+|--------|----------------------|--------------------------------|
+| GET    | /api/tasks           | Obtener todas las tareas       |
+| GET    | /api/tasks/:id       | Obtener una tarea por ID       |
+| POST   | /api/tasks           | Crear nueva tarea              |
+| PUT    | /api/tasks/:id       | Actualizar tarea               |
+| DELETE | /api/tasks/:id       | Eliminar tarea                 |
+| GET    | /api/tasks/stats     | Obtener estadísticas           |
 
-📚 API Endpoints
+### 🤖 IA (Gemini)
 
-Tareas  
-GET /api/tasks - Obtener todas las tareas  
-GET /api/tasks/:id - Obtener tarea por ID  
-POST /api/tasks - Crear nueva tarea  
-PUT /api/tasks/:id - Actualizar tarea  
-DELETE /api/tasks/:id - Eliminar tarea  
-GET /api/tasks/stats - Obtener estadísticas  
+| Método | Endpoint              | Descripción                      |
+|--------|-----------------------|----------------------------------|
+| POST   | /api/ai/summary       | Generar resumen de tareas        |
+| POST   | /api/ai/create-task   | Crear tarea desde lenguaje natural |
 
-IA (Gemini)  
-POST /api/ai/summary - Generar resumen de tareas  
-POST /api/ai/create-task - Crear tarea con IA  
+### ❤️ Health Check
+- `GET /api/health` — Estado del sistema
 
-Salud del sistema  
-GET /api/health - Verificar estado de la API  
+---
 
-🎯 Funcionalidades Principales
+## 📊 Dashboard y Funcionalidades
 
-Gestión de Tareas  
-- Crear tareas con título, descripción, prioridad y fecha límite  
-- Editar tareas existentes  
-- Cambiar estados: Pendiente, En Progreso, Completada  
-- Eliminar tareas con confirmación  
-- Sistema de etiquetas para organización  
-- Filtros avanzados por estado, prioridad y búsqueda  
+- Crear, editar, actualizar y eliminar tareas
+- Cambiar estados: pendiente, en progreso, completada
+- Sistema de etiquetas
+- Filtros por estado, prioridad y texto
+- **Resumen inteligente de IA**
+- **Creación automática de tareas por IA**
+- Dashboard con progreso y tareas vencidas
 
-Funcionalidades de IA  
-- Resumen inteligente de todas las tareas usando Gemini  
-- Creación automática de tareas mediante descripción en lenguaje natural  
-- Análisis de productividad y sugerencias  
+---
 
-Dashboard  
-- Estadísticas en tiempo real  
-- Gráficos de progreso  
-- Tareas vencidas destacadas  
-- Vista de calendario (próximamente)  
+## 🧬 Modelo de Datos
 
-🔧 Scripts Disponibles
-
-Backend
-npm start      # Ejecutar en producción  
-npm run dev    # Ejecutar en desarrollo con nodemon  
-npm test       # Ejecutar tests (por implementar)  
-
-Frontend
-npm run dev    # Ejecutar en desarrollo  
-npm run build  # Construir para producción  
-npm start      # Ejecutar versión de producción  
-npm run lint   # Ejecutar linter  
-
-🗄️ Modelo de Datos
-
-Task Schema
-
+```ts
 {
-  title: String (requerido, máx. 100 caracteres),
-  description: String (requerido, máx. 500 caracteres),
-  status: Enum ['pendiente', 'en progreso', 'completada'],
-  priority: Enum ['baja', 'media', 'alta'],
-  dueDate: Date (opcional, debe ser futura),
-  tags: Array de Strings,
-  createdAt: Date (automático),
-  updatedAt: Date (automático),
-  isOverdue: Virtual (calculado)
+  title: string,               // requerido, máx. 100 caracteres
+  description: string,         // requerido, máx. 500 caracteres
+  status: 'pendiente' | 'en progreso' | 'completada',
+  priority: 'baja' | 'media' | 'alta',
+  dueDate?: Date,              // opcional, debe ser futura
+  tags: string[],
+  createdAt: Date,
+  updatedAt: Date,
+  isOverdue: boolean           // calculado
 }
+```
+
+---
+
+## 🔐 Seguridad
+
+- 🛡️ Headers seguros con Helmet
+- 🌍 CORS para controlar orígenes
+- 🧼 Sanitización de inputs
+- ✅ Validación estricta con Express Validator
+- 🚫 Rate limiting (recomendado para producción)
+
+---
+
+## 🚀 Despliegue
+
+### 🔁 Backend
+```bash
+npm install --production
+npm start
+```
+
+### 🌐 Frontend
+```bash
+npm run build
+npm start
+```
+
+**Recomendaciones de Hosting:**
+
+- Backend: Railway, Render, Heroku
+- Frontend: Vercel, Netlify
+- Database: MongoDB Atlas
+
+---
+
+## 🔧 Scripts Útiles
+
+### Backend
+
+```bash
+npm run dev     # Modo desarrollo con nodemon
+npm start       # Producción
+npm test        # Ejecutar tests (por implementar)
+```
+
+### Frontend
+
+```bash
+npm run dev     # Desarrollo
+npm run build   # Producción
+npm start       # Ejecutar app
+npm run lint    # Linter
+```
+
+---
+
+## 🤝 Contribución
+
+1. Haz un fork del proyecto
+2. Crea una nueva rama (`git checkout -b feature/NuevaFeature`)
+3. Realiza tus cambios y haz commit (`git commit -m 'Agregar nueva funcionalidad'`)
+4. Sube tu rama (`git push origin feature/NuevaFeature`)
+5. Abre un Pull Request
+
+---
+
+## 📝 Licencia
+
+Este proyecto está licenciado bajo la **Licencia ISC**.
+
+---
+
+## 👨‍💻 Autor
+
+Desarrollado con ❤️ por Diego Castañeda y colaboradores.
+
+¿Dudas o sugerencias?  
+Abre un [issue](https://github.com/tu-usuario/task-app/issues) o contáctanos.
